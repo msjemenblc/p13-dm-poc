@@ -1,0 +1,17 @@
+<div class="chat-container">
+    <div #chatContainer class="messages">
+        <div *ngFor="let message of messages" class="message" [class.sent]="message.senderId === senderId">
+            <div class="message-content">{{ message.content }}</div>
+            <div class="message-time">{{ message.createdAt | date: 'short' }}</div>
+        </div>
+    </div>
+
+    <div class="send-message">
+        <input [(ngModel)]="content" type="text" placeholder="Votre message" />
+        <button (click)="sendMessage()">Envoyer</button>
+    </div>
+
+    <div class=" change-profile">
+        <button (click)="toggleUser()">Change profile</button>
+    </div>
+</div>
