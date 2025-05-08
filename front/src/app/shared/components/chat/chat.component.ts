@@ -48,7 +48,6 @@ export class ChatComponent implements OnInit {
 
     private scrollToBottom(): void {
         if (this.chatContainer && this.chatContainer.nativeElement) {
-            console.log("Scrolling to bottom...");
             this.chatContainer.nativeElement.scrollTop = this.chatContainer.nativeElement.scrollHeight;
         } else {
             console.error("chatContainer non trouvé !");
